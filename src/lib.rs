@@ -197,6 +197,7 @@ cfg_if! {
         mod sgx;
         pub use sgx::*;
     }  else {
-        // non-supported targets: empty...
+        mod unix;
+        pub use unix::*;
     }
 }
