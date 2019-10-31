@@ -196,8 +196,10 @@ cfg_if! {
     } else if #[cfg(target_env = "sgx")] {
         mod sgx;
         pub use sgx::*;
-    }  else {
-        mod unix;
-        pub use unix::*;
+    }  else if #[cfg(target_os = "theseus")] {
+        mod redox;
+        pub use redox::*;
+    } else {
+        // non-supported targets: empty...
     }
 }
