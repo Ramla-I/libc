@@ -1,3 +1,5 @@
+pub mod errno;
+
 pub type int8_t = i8;
 pub type int16_t = i16;
 pub type int32_t = i32;
