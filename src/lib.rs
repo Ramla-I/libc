@@ -200,6 +200,7 @@ cfg_if! {
         mod redox;
         pub use redox::*;
     } else {
-        // non-supported targets: empty...
+        mod redox;
+        pub use redox::*;
     }
 }
