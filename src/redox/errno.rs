@@ -1,5 +1,7 @@
 //! errno implementation for Redox from relibc, following http://pubs.opengroup.org/onlinepubs/7908799/xsh/errno.h.html
 
+use redox::c_int;
+
 pub const EPERM:            c_int = 1; /* Operation not permitted */
 pub const ENOENT:           c_int = 2; /* No such file or directory */
 pub const ESRCH:            c_int = 3; /* No such process */
